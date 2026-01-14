@@ -12,42 +12,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Profile Card</title>
+    <title>Profile Card | HTML & CSS Only</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="container">
+        <!-- Theme Toggle (CSS-only) -->
+        <div class="theme-control">
+            <input type="checkbox" id="themeToggle" class="theme-checkbox">
+            <label for="themeToggle" class="theme-label">
+                <span class="theme-icon">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </span>
+                <span class="theme-text">Dark Mode</span>
+            </label>
+        </div>
 
-    <div class="card-container">
+        <!-- Main Profile Card -->
         <div class="profile-card">
-            <div class="card-header">
-                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
-            </div>
-            
-            <div class="card-body">
-                <h1 class="name">Felix Kipngetich</h1>
-                <p class="bio">Passionate Full-Stack Developer & UI Designer. I build clean, functional, and user-friendly digital experiences.</p>
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                         alt="Alex Morgan" class="profile-img">
+                    <span class="status-indicator" title="Available for work"></span>
+                </div>
                 
-                <div class="skills">
-                    <span class="tag">HTML5</span>
-                    <span class="tag">CSS3</span>
-                    <span class="tag">Flexbox</span>
-                    <span class="tag">UI Design</span>
+                <h1 class="profile-name">Alex Morgan</h1>
+                <p class="profile-title">Frontend Developer</p>
+                
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>San Francisco, CA</span>
                 </div>
             </div>
 
-            <div class="card-footer">
-                <div class="social-links">
-                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+            <!-- Bio Section -->
+            <div class="profile-bio">
+                <p>Passionate about creating beautiful, accessible, and responsive web experiences. Love modern CSS techniques and clean code.</p>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="skills-section">
+                <h3 class="section-title">
+                    <i class="fas fa-code"></i>
+                    Skills & Tools
+                </h3>
+                <div class="skills-grid">
+                    <span class="skill-tag" data-skill="Advanced">
+                        <i class="fab fa-html5"></i> HTML5
+                    </span>
+                    <span class="skill-tag" data-skill="Advanced">
+                        <i class="fab fa-css3-alt"></i> CSS3
+                    </span>
+                    <span class="skill-tag" data-skill="Intermediate">
+                        <i class="fab fa-js"></i> JavaScript
+                    </span>
+                    <span class="skill-tag" data-skill="Advanced">
+                        <i class="fas fa-mobile-alt"></i> Responsive
+                    </span>
+                    <span class="skill-tag" data-skill="Intermediate">
+                        <i class="fab fa-figma"></i> Figma
+                    </span>
+                    <span class="skill-tag" data-skill="Beginner">
+                        <i class="fab fa-react"></i> React
+                    </span>
                 </div>
-                <button class="btn-contact">View Portfolio</button>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="stat-item">
+                    <span class="stat-number">42</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Years</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Satisfaction</span>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-section">
+                <h3 class="section-title">
+                    <i class="fas fa-share-alt"></i>
+                    Connect With Me
+                </h3>
+                <div class="social-links">
+                    <a href="#" class="social-link github" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span class="link-text">GitHub</span>
+                    </a>
+                    <a href="#" class="social-link linkedin" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span class="link-text">LinkedIn</span>
+                    </a>
+                    <a href="#" class="social-link twitter" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span class="link-text">Twitter</span>
+                    </a>
+                    <a href="#" class="social-link portfolio" aria-label="Portfolio">
+                        <i class="fas fa-briefcase"></i>
+                        <span class="link-text">Portfolio</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Action Button -->
+            <div class="action-section">
+                <label for="contactToggle" class="contact-btn">
+                    <input type="checkbox" id="contactToggle" class="contact-checkbox">
+                    <span class="btn-text">Contact Me</span>
+                    <span class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        alex@example.com
+                    </span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Card Footer -->
+        <div class="card-footer">
+            <p>Built with pure HTML & CSS • No JavaScript</p>
+            <div class="style-buttons">
+                <input type="radio" id="styleDefault" name="cardStyle" checked>
+                <label for="styleDefault" class="style-btn">Default</label>
+                
+                <input type="radio" id="styleGlass" name="cardStyle">
+                <label for="styleGlass" class="style-btn">Glass</label>
+                
+                <input type="radio" id="styleNeumorphism" name="cardStyle">
+                <label for="styleNeumorphism" class="style-btn">Neumorphism</label>
             </div>
         </div>
     </div>
-
 </body>
 </html>
